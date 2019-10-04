@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays  - sort </title>
+
+	<script type="text/javascript">
+		lista = new Array();
+		var bucle = 10;
+		var num;
+		var i=0;
+
+		do {
+			num= Math.floor(Math.random() * 100)+1; 
+			(lista.includes(num)) ? document.write(`se ha producido un duplicado ${num} <br>`) : (lista.push(num), i++);
+		} while (i<bucle);
+
+		document.write(`array ${lista} <br>`);
+		//ordenar la tabla
+		var ordenado=lista.sort(function(a, b){return a - b});
+		document.write(`array ${ordenado} <br>`);
+		//obtener el mayor y el menor de los numeros obtenidos
+		
+		document.write(`el número menor es: ${ordenado[0]}   y el número mayor es: ${ordenado[ordenado.length-1]} `);
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
